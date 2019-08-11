@@ -13,8 +13,16 @@
                                                                                 Angular-->
         </mat-form-field>
         <div class="BConsulta">
-            <button mat-flat-button color="primary">Buscar</button>
+            <button mat-flat-button color="primary" (click)="buscarCiudad(citizen)">Buscar</button>
+            <br>
         </div>
     </form>    
 </div>
+
+<hr>
+
+<app-c-actual [miCiudad]="ciudad"></app-c-actual>
+
+
+
 

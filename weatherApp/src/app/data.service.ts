@@ -9,10 +9,12 @@ import { City } from './ciudad.model'/*Importamos el objeto ciudad creado como m
 })
 export class DataService {
   /**Creamos una variable y leemos le api mediante la url de desarrollo */
-  apiUrl='api.openweathermap.org/data/2.5/weather?q={city name}';
+  apiUrl='api.openweathermap.org/data/2.5/weather?q={name}';
    /**Creamos una variable llamada httpclient para decirle que use ese modulo
    * dentro de esa clase, y como es solo en la clase, private*/
-  constructor(private httpclient:HttpClient) { }
+  constructor(private httpclient:HttpClient) { 
+    console.log('El servicio me funciona, OH SI')
+  }
 
   /**Metodo que toma la ciudad a partir del nombre para usarse en  el front */
   getCiudad(){
