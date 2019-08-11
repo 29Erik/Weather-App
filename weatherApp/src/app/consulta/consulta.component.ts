@@ -10,9 +10,14 @@ import {DataService} from '../data.service';
 export class ConsultaComponent implements OnInit {  
   
   ciudad:City[];//Creamos el arreglo vacío que irá almacenando lo que lea del api
-
+  cActual:City[];//Arreglo de tipo ciudad que va a almacenar la ciudad como tal
   buscarCiudad(city){
-    this.ciudad.push(city.value);
+    this.ngOnInit();
+    for(let i=0;i<this.ciudad.length;i++){//Recorremos el arreglo que ha salido del api
+      if(city==this.ciudad[i]){//Validamos todo el arreglo para encontrar la comparación exacta
+          this.cActual.push(this.ciudad[i]);//Al momento de c¿encontrarla insertela en un arreglo
+      }
+    }
     city.value='';/**Se le dice que vacie la casilla asignando string vacio */
     city.focus();/**Que el cursor se quede en el input text */
     return false;/**Al hacerlo false hacemos que no refresque la pág, cancela el evento que trae por defecto angular*/
