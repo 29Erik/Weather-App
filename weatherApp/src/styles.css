@@ -1,0 +1,5 @@
+/* You can add global styles to this file, and also import other style files */
+/*En este archivo modificamos todos los estilos de la aplicación global*/
+
+/*Cargamos el tema que angular amterials ofrece*/
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";

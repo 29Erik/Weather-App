@@ -1,0 +1,20 @@
+<!--Zona inicial en la cual se desarrollará la consulta del clima por ciudad-->
+<div class="Busqueda">
+    <div class="Titulo">
+        <h2>
+            Busca la ciudad de preferencia
+        </h2>
+    </div>
+    
+    <form class="FormularioCiudad" (submit)="buscarCiudad(citizen)">
+        <mat-form-field class="example-full-width">
+            <input type="text" matInput placeholder="Clima de la Ciudad" value="" #citizen><!--El numeral es como el id, así vamos a identificar
+                                                                                la manera en como se va a llamar para tomarlo, manera de 
+                                                                                Angular-->
+        </mat-form-field>
+        <div class="BConsulta">
+            <button mat-flat-button color="primary">Buscar</button>
+        </div>
+    </form>    
+</div>
+
