@@ -1,11 +1,11 @@
 <!--Llamamos las variables de la ciudad a partir del input dado en la consulta-->
 <div class="Actual">
     <h1>Ciudad: {{miCiudad.name}}</h1>
-    <p>Clima: {{miCiudad.main}}</p>
-    <p>Descripcion: {{miCiudad.description}}</p>
-    <p>Temperatura: {{miCiudad.temp}}</p>
-    <p>Temperatura minima: {{miCiudad.temp_min}}</p>
-    <p>Temperatura máxima: {{miCiudad.temp_max}}</p>
-    <p>Presion: {{miCiudad.pressure}}</p>
-    <p>Humedad: {{miCiudad.humidity}}</p>
+    <p>Clima: {{miCiudad.weather[0].main}}</p>
+    <p>Descripcion: {{miCiudad.weather[0].description}}</p>
+    <p>Temperatura: {{miCiudad.main.temp}}</p>
+    <p>Temperatura minima: {{miCiudad.main.temp_min}}</p>
+    <p>Temperatura máxima: {{miCiudad.main.temp_max}}</p>
+    <p>Presion: {{miCiudad.main.pressure}}</p>
+    <p>Humedad: {{miCiudad.main.humidity}}</p>
 </div>

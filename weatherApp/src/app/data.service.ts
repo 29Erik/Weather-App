@@ -10,7 +10,8 @@ import { ClassGetter } from '@angular/compiler/src/output/output_ast';
 })
 export class DataService {
   /**Creamos una variable y leemos le api mediante la url de desarrollo */
-  apiUrl='api.openweathermap.org/data/2.5/weather?q=';
+  apiUrl='http://api.openweathermap.org/data/2.5/weather?q=';
+  key='&APPID=9e714e3fc68a3094243ccfe962a8285f';
    /**Creamos una variable llamada httpclient para decirle que use ese modulo
    * dentro de esa clase, y como es solo en la clase, private*/
   constructor(private httpclient:HttpClient) { 
@@ -20,6 +21,6 @@ export class DataService {
   /**Metodo que toma la ciudad a partir del nombre para usarse en  el front */
   getCiudad(nomCiudad){
     console.log(nomCiudad);
-    return this.httpclient.get<City[]>(this.apiUrl+nomCiudad);
+    return this.httpclient.get<City[]>(this.apiUrl+nomCiudad+this.key);
   }
 }

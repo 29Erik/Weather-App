@@ -9,7 +9,10 @@ import { City } from '../ciudad.model';
 export class CActualComponent implements OnInit {  
   @Input() miCiudad:City[];
   @Input() habilitar:boolean;
-  constructor() { }
+  constructor() { 
+    console.log("Variable en componente siguiente: ");
+    console.log(this.miCiudad);
+  }
 
  //Llama a la funcion de habilitar el comonente cuando cumple la validación del dato
  onEnableComponent() {

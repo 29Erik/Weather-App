@@ -1,10 +1,17 @@
-export class City{
+export interface City{
     name:string;
-    description:string;
-    main:string;
-    temp:number;
-    temp_min:number;
-    temp_max:number;
-    pressure:number;
-    humidity:number;
+    weather:{
+        description:string,
+        main:string;
+    };
+    main:{
+        temp:number,
+        temp_min:number,
+        temp_max:number,
+        pressure:number,
+        humidity:number
+    };
+    wind:{
+        speed:number
+    };   
 }
