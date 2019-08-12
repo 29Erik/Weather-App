@@ -3,13 +3,14 @@ import { HttpClient} from '@angular/common/http'/**Importamos la libreria http d
                                       llamar archivos de un json, el HttpClient es un cliente que permite
                                       hacer peticiones desde angular */
 import { City } from './ciudad.model'/*Importamos el objeto ciudad creado como modelo*/
+import { ClassGetter } from '@angular/compiler/src/output/output_ast';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
   /**Creamos una variable y leemos le api mediante la url de desarrollo */
-  apiUrl='api.openweathermap.org/data/2.5/weather?q={name}';
+  apiUrl='api.openweathermap.org/data/2.5/weather?q=';
    /**Creamos una variable llamada httpclient para decirle que use ese modulo
    * dentro de esa clase, y como es solo en la clase, private*/
   constructor(private httpclient:HttpClient) { 
@@ -17,7 +18,8 @@ export class DataService {
   }
 
   /**Metodo que toma la ciudad a partir del nombre para usarse en  el front */
-  getCiudad(){
-    return this.httpclient.get<City[]>(this.apiUrl);
+  getCiudad(nomCiudad){
+    console.log(nomCiudad);
+    return this.httpclient.get<City[]>(this.apiUrl+nomCiudad);
   }
 }

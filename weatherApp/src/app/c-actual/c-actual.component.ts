@@ -8,7 +8,18 @@ import { City } from '../ciudad.model';
 })
 export class CActualComponent implements OnInit {  
   @Input() miCiudad:City[];
+  @Input() habilitar:boolean;
   constructor() { }
+
+ //Llama a la funcion de habilitar el comonente cuando cumple la validación del dato
+ onEnableComponent() {
+  this.habilitar = false;
+}
+
+//Llama a la funcion de deshabilitar el comonente cuando cumple la validación del dato
+onDisableComponent() {
+  this.habilitar = true;
+}
 
   ngOnInit() {
   }
