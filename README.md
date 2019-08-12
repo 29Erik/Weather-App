@@ -1,15 +1,24 @@
 # Weather-App
 App for the control and visualization of the weather in different cities using Angular and API Rest.
 
-<<<<<<< HEAD
-Autor: Erikson Javier Romero Hernández
-Versión de Node JS: 12.8.0
-Versión de angular: 8
+Autor: Erikson Javier Romero Hernández.
+Version de Node JS: 12.8.0
+Version de Angular: 8
 
-Commit 002:
-En este commit se hizo una serie de pruebas para el avance en la cmunicación del api rest junto a angular
-=======
-Autor: Erikson Javier Romero HernÃ¡ndez
-VersiÃ³n de Node JS: 12.8.0
-VersiÃ³n de angular: 7
->>>>>>> 2d0e579c4a91a70d6abeba5d4b725977339456d6
+Commit 006:
+En este commit se hizo la vinculación del API dado con la aplicación desarrollada en Angular con un front básico y el uso de componentes, servicios y modelos para el funcionamiento de la misma
+
+## Instalacion
+Para instalar el proyecto se necesita instalar los paquetes con el siguiente comando localizados en el directorio de la carpeta
+```bash
+npm install
+
+```
+## Uso
+Para usar la aplicación, estando localizados en el directorio raíz, se ejecuta el siguiente comando y en el input box es colocar el nombre de la ciudad deseada
+```bash
+ng serve -o
+```
+## Framework
+[NodeJS](https://https://nodejs.org/es/)
+[Angular](https://https://angular.io/)

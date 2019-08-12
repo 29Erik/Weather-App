@@ -7,7 +7,7 @@ import { City } from '../ciudad.model';
   styleUrls: ['./c-actual.component.css']
 })
 export class CActualComponent implements OnInit {  
-  @Input() miCiudad:City[];
+  @Input() miCiudad:City[];//Arreglo que va a recibir un api de tipo city que viene del componente de consulta
   @Input() habilitar:boolean;
   constructor() { 
     console.log("Variable en componente siguiente: ");

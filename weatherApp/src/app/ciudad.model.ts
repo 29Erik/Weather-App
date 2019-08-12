@@ -1,3 +1,4 @@
+//Modelo de los ciudad recibido desde el api
 export interface City{
     name:string;
     weather:{
